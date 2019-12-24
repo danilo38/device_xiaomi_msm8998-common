@@ -103,6 +103,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.eis.enable=1 \
     persist.camera.xm.green.b=0.96 \
     persist.camera.xm.green.r=0.97 \
     persist.ts.rtmakeup=false \
@@ -110,7 +111,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.set.afd=4 \
     persist.vendor.dualcam.lpm.enable=1 \
     vendor.camera.aux.packagelist=com.android.camera,org.lineageos.snap \
+    vendor.camera.aux.packagelist=com.google.android.GoogleCamera,com.google.android.GoogleCameraTele,com.android.camera \
+    camera.hal1.packagelist=com.whatsapp \
     vidc.enc.dcvs.extra-buff-count=2
+
+# Youtube 4k
+PRODUCT_PROPERTY_OVERRIDES += \
+   sys.display-size=3840x2160
+
+#Set cutoff voltage to 3200mV
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.cutoff_voltage_mv=3400
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
